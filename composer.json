@@ -1,5 +1,5 @@
 {
-  "name": "urogibarni/AresClient",
+  "name": "urogibarni/ares-client",
   "description": "PHP library allows to retrieve company data from the Czech Companies Register (ARES) based on their IČO (Registration Number).",
   "license": "proprietary",
   "type": "library",
