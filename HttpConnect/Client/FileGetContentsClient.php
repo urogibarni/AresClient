@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Http\Controllers\AresClient\HttpConnect\Client;
+namespace Ares\CompanyDataFetcher\HttpConnect\Client;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\ClientTrait;

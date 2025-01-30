@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Http\Controllers\AresClient\DataFormater\Driver;
+namespace Ares\CompanyDataFetcher\DataFormater\Driver;
 
 interface DataFormaterDriverInterface
 {

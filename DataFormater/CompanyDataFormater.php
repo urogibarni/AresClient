@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace App\Http\Controllers\AresClient\DataFormater;
+namespace Ares\CompanyDataFetcher\DataFormater;
 
-use App\Http\Controllers\AresClient\DataFormater\Driver\DataFormaterDriverInterface;
-use App\Http\Controllers\AresClient\DataObject\CompanyDTO;
+use Ares\CompanyDataFetcher\DataFormater\Driver\DataFormaterDriverInterface;
+use Ares\CompanyDataFetcher\DataObject\CompanyDTO;
 
 class CompanyDataFormater
 {

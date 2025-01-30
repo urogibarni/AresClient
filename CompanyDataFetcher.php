@@ -2,16 +2,16 @@
 
 declare(strict_types = 1);
 
-namespace App\Http\Controllers\AresClient;
+namespace Ares\CompanyDataFetcher;
 
-use App\Http\Controllers\AresClient\DataFormater\CompanyDataFormater;
-use App\Http\Controllers\AresClient\DataObject\CompanyDTO;
-use App\Http\Controllers\AresClient\Exception\InvalidIcoException;
-use App\Http\Controllers\AresClient\Exception\JsonDecodeErrorException;
-use App\Http\Controllers\AresClient\HttpConnect\Exception\HttpConnectException;
-use App\Http\Controllers\AresClient\HttpConnect\HttpProvider;
-use App\Http\Controllers\AresClient\Util\CzechIcoValidator;
-use App\Http\Controllers\AresClient\Util\UrlUtil;
+use Ares\CompanyDataFetcher\DataFormater\CompanyDataFormater;
+use Ares\CompanyDataFetcher\DataObject\CompanyDTO;
+use Ares\CompanyDataFetcher\Exception\InvalidIcoException;
+use Ares\CompanyDataFetcher\Exception\JsonDecodeErrorException;
+use Ares\CompanyDataFetcher\HttpConnect\Exception\HttpConnectException;
+use Ares\CompanyDataFetcher\HttpConnect\HttpProvider;
+use Ares\CompanyDataFetcher\Util\CzechIcoValidator;
+use Ares\CompanyDataFetcher\Util\UrlUtil;
 use GuzzleHttp\Exception\GuzzleException;
 use InvalidArgumentException;
 use JsonException;

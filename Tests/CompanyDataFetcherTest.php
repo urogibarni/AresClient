@@ -2,11 +2,11 @@
 
 declare(strict_types = 1);
 
-namespace App\Http\Controllers\AresClient\Tests;
+namespace Ares\CompanyDataFetcher\Tests;
 
-use App\Http\Controllers\AresClient\CompanyDataFetcher;
-use App\Http\Controllers\AresClient\DataFormater\CompanyDataFormater;
-use App\Http\Controllers\AresClient\Util\CzechIcoValidator;
+use Ares\CompanyDataFetcher\CompanyDataFetcher;
+use Ares\CompanyDataFetcher\DataFormater\CompanyDataFormater;
+use Ares\CompanyDataFetcher\Util\CzechIcoValidator;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;
 

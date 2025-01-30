@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Http\Controllers\AresClient\HttpConnect\Exception;
+namespace Ares\CompanyDataFetcher\HttpConnect\Exception;
 
 use RuntimeException;
 

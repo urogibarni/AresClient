@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Http\Controllers\AresClient\Util;
+namespace Ares\CompanyDataFetcher\Util;
 
 class UrlUtil
 {
