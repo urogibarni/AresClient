@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace App\Http\Controllers\AresClient\Tests\Util;
+namespace Tests\Util;
 
 use App\Http\Controllers\AresClient\Util\UrlUtil;
 use PHPUnit\Framework\TestCase;
