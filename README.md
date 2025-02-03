@@ -89,7 +89,7 @@ AresClient\DataObject\CompanyDTO {
 }
 ```
 
-**Example Json Export**
+**Example XML Export**
 
 ```xml
 <?xml version="1.0"?>
