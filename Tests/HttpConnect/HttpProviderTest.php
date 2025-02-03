@@ -12,7 +12,7 @@ use Psr\Http\Message\StreamInterface;
 
 class HttpProviderTest extends TestCase
 {
-    public function testZee(): void
+    public function testSuccessResponse(): void
     {
         $client = $this->createMock(Client::class);
         $response = $this->createMock(ResponseInterface::class);

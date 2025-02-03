@@ -18,7 +18,6 @@ use JsonException;
 use Psr\Log\LogLevel;
 use Psr\Log\LoggerInterface;
 use stdClass;
-use Throwable;
 
 final class CompanyDataFetcher
 {
@@ -37,6 +36,7 @@ final class CompanyDataFetcher
         $this->handleIco($ico);
 
         $uri = UrlUtil::getUrl($ico);
+
         try {
             $this->httpProvider->request('GET', $uri);
         } catch (GuzzleException $exception) {

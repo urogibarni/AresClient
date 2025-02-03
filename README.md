@@ -103,3 +103,66 @@ AresClient\DataObject\CompanyDTO {
     <zip>61500</zip>
 </root>
 ```
+
+
+###### 6. Error Handling
+
+The library handles the following errors:
+
+- **Invalid ICO**: If the ICO does not meet the valid Czech business registration criteria (e.g., not having the correct format or failing validation checks), it is considered invalid.
+
+- **Nonexistent ICO**: If no company with the given ICO exists in the registry, this is considered an error.
+
+- **API Error**: If the ARES API does not respond or returns invalid data, an error is triggered.
+
+###### 7. Testing
+
+The library includes a test suite. Tests can be run using the following command:
+
+```
+phpunit Tests/ --testdox
+```
+
+The tests cover input validation, response processing, and error scenarios.
+
+
+### Test result examples:
+
+**Company Data Fetcher (Tests\CompanyDataFetcher)**
+```
+✔ Successfully fetched company
+✔ Invalid ico
+✔ Invalid content
+✔ Json data formatter
+✔ Xml data formatter
+```
+
+**Company DTO (Tests\DataObject\CompanyDTO)**
+```
+✔ Company d t o
+```
+
+**Http Provider (Tests\HttpConnect\HttpProvider)**
+```
+✔ Success response
+```
+
+**Czech Ico Validator (Tests\Util\CzechIcoValidator)**
+```
+✔ Valid ico
+✔ Ico with leading zeros
+✔ Invalid ico too short
+✔ Invalid ico too long
+✔ Invalid ico with non numeric character
+✔ Invalid ico with incorrect control digit
+✔ Empty ico
+✔ Trim whitespace
+```
+
+**Url Util (Tests\Util\UrlUtil)**
+```
+✔ Get url 5length
+✔ Get url 8length
+✔ Get url with spaces
+✔ Get url empty
+```
