@@ -18,6 +18,7 @@ use JsonException;
 use Psr\Log\LogLevel;
 use Psr\Log\LoggerInterface;
 use stdClass;
+use Throwable;
 
 final class CompanyDataFetcher
 {
@@ -40,7 +41,12 @@ final class CompanyDataFetcher
         try {
             $this->httpProvider->request('GET', $uri);
         } catch (GuzzleException $exception) {
-            $this->log(sprintf('HttpRequest Error: %s', $exception->getMessage()), LogLevel::ERROR);
+
+            $this->log(
+                sprintf('HttpRequest Error: %s', $exception->getMessage()),
+                LogLevel::ERROR,
+                $exception
+            );
 
             throw new HttpConnectException(sprintf('Error loading data from location: %s', $uri));
         }
@@ -48,7 +54,11 @@ final class CompanyDataFetcher
         try {
             $companyData = $this->getDecodedData();
         } catch (JsonException $exception) {
-            $this->log(sprintf('Data encoding error: %s', $exception->getMessage()), LogLevel::ERROR);
+            $this->log(
+	    	sprintf('Data encoding error: %s', $exception->getMessage()),
+                LogLevel::ERROR,
+                $exception
+            );
 
             throw new JsonDecodeErrorException('An error occurred while processing the data.');
         }
@@ -105,12 +115,12 @@ final class CompanyDataFetcher
         ;
     }
 
-    private function log(string $message, string $level): void
+    private function log(string $message, string $level, Throwable $exception = null): void
     {
         if (null === $this->logger) {
             return;
         }
 
-        $this->logger->log($level, sprintf('|AresClient| %s', $message));
+        $this->logger->log($level, sprintf('|AresClient| %s', $message), ['exception' => $exception]);
     }
 }
