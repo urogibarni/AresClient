@@ -23,7 +23,7 @@ It uses the official REST API endpoint and provides validated and structured dat
 If you are using Composer, you can add the library as a custom package or simply integrate it into your project:
 
 ```
-composer require vasabalik/ares-client
+composer require urogibarni/ares-client
 ```
 
 Or manually copy the files into your project and call it with require.
